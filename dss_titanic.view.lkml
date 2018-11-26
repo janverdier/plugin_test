@@ -59,6 +59,6 @@ view: dss_titanic{
   dimension: Embarked {
     type: string
     sql: ${TABLE}.Embarked;;
-    description: "Embarked city"
+    description: "Embarked city in England"
   }
 }
