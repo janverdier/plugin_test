@@ -19,7 +19,6 @@ view: dss_titanic{
   dimension: Name {
     type: string
     sql: ${TABLE}.Name;;
-    description: "Name of the passenger"
   }
   dimension: Sex {
     type: string
