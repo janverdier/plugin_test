@@ -27,8 +27,22 @@
    description: ""
   }
   dimension: Age {
-   type: string
+   type: number
    sql: ${TABLE}.Age;;
+   description: ""
+  }
+  dimension_group: BirthDate {
+   type: time
+   timeframes: [
+    raw,
+    time,
+    date,
+    week,
+    month,
+    quarter,
+    year
+   ]
+   sql: ${TABLE}.BirthDate;;
    description: ""
   }
   dimension: SibSp {
@@ -47,7 +61,7 @@
    description: ""
   }
   dimension: Fare {
-   type: string
+   type: number
    sql: ${TABLE}.Fare;;
    description: ""
   }
