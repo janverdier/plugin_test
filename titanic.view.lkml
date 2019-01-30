@@ -1,5 +1,5 @@
 
- view: titanic {
+ view: vtitanic {
   sql_table_name: titanic;;
   dimension: PassengerId {
    type: string
