@@ -1,10 +1,10 @@
 #####################################################
 # COPY THIS TO A NEW VIEW TO EXTEND THE VIEW/TABLE
 #####################################################
-#inlclude: 'dss_col3.view'
-#   view: ex_dss_col3 {
-#     extends: [dss_col3]
-#     sql_table_name:  dss_col3;;
+#inlclude: 'dss_test.view'
+#   view: ex_dss_test {
+#     extends: [dss_test]
+#     sql_table_name:  dss_test;;
 #     ## Define custom dimensions and measures here
 #     # dimension: user_id {
 #     #   description: "Unique ID for user"
@@ -13,8 +13,8 @@
 #   #}
 #}
 #####################################################
-view: dss_col3 {
-    sql_table_name:  dss_col3;;
+view: dss_test {
+    sql_table_name:  dss_test;;
      dimension: col1 {
     type: number
     sql: ${TABLE}.col1;;
