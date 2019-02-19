@@ -1,10 +1,10 @@
 #####################################################
 # COPY THIS TO A NEW VIEW TO EXTEND THE VIEW/TABLE
 #####################################################
-#inlclude: 'dss_dss_jobs_prepared.view'
-#   view: ex_dss_dss_jobs_prepared {
-#     extends: [dss_dss_jobs_prepared]
-#     sql_table_name:  dss_dss_jobs_prepared;;
+#inlclude: 'dss_jobs_prepared.view'
+#   view: ex_dss_jobs_prepared {
+#     extends: [dss_jobs_prepared]
+#     sql_table_name:  dss_jobs_prepared;;
 #     ## Define custom dimensions and measures here
 #     # dimension: user_id {
 #     #   description: "Unique ID for user"
@@ -13,8 +13,8 @@
 #   #}
 #}
 #####################################################
-view: dss_dss_jobs_prepared {
-    sql_table_name:  dss_dss_jobs_prepared;;
+view: dss_jobs_prepared {
+    sql_table_name:  dss_jobs_prepared;;
      dimension: job_project_key {
     type: string
     sql: ${TABLE}.job_project_key;;
@@ -33,5 +33,12 @@ view: dss_dss_jobs_prepared {
         ]
         sql: ${TABLE}.time_start;;
         description: ""
+    }
+    measure: count {
+        type: count
+        drill_fields: [drill_down*]
+    }
+    set: drill_down {
+        fields: [job_project_key]
     }
 }
