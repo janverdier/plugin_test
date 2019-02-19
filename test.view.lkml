@@ -19,11 +19,13 @@ view: dss_test {
     type: number
     sql: ${TABLE}.col1;;
     description: "Comment on column"
+    drill_fields: [['col2']]
   }
  dimension: col2 {
     type: string
     sql: ${TABLE}.col2;;
     description: ""
+    drill_fields: [[]]
   }
  dimension_group: col3 {
         type: time

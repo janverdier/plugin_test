@@ -19,6 +19,7 @@ view: dss_test2 {
     type: string
     sql: ${TABLE}.col2;;
     description: "More comments"
+    drill_fields: [[]]
   }
  dimension_group: col3 {
         type: time
