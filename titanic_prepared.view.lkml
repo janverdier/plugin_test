@@ -57,7 +57,7 @@ view: dss_titanic_prepared {
         year
         ]
         sql: ${TABLE}.BirthDate;;
-        description: ""
+        description: "Birthdate calculated based on the age"
     }
  dimension: SibSp {
     type: string
